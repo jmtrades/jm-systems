@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JM Systems - AI Business Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0e27;color:#e0e6ff;line-height:1.6}
+header{background:rgba(10,14,39,.95);padding:1rem 2rem;border-bottom:1px solid rgba(147,112,219,.1);position:sticky;top:0;z-index:100}
+.h-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#9370db,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+section{max-width:1200px;margin:0 auto;padding:4rem 2rem}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(10,14,39,1),rgba(20,25,60,.8)),radial-gradient(circle at 30% 50%,rgba(147,112,219,.15),transparent 50%);text-align:center}
+.hero-content{max-width:700px}
+h1{font-size:3.5rem;font-weight:800;margin-bottom:1.5rem;background:linear-gradient(135deg,#fff,#9370db,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
+.subtext{font-size:1.1rem;color:#b0b8d4;margin-bottom:2rem;line-height:1.8}
+.btn{display:inline-block;padding:.95rem 2.5rem;background:linear-gradient(135deg,#9370db,#6b5ccc);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;border:none;cursor:pointer;transition:all .3s ease}
+.btn:hover{background:linear-gradient(135deg,#a88edb,#7d6dd9);transform:translateY(-2px);box-shadow:0 10px 30px rgba(147,112,219,.3)}
+h2{font-size:2.2rem;font-weight:700;margin-bottom:3rem;text-align:center;background:linear-gradient(135deg,#fff,#9370db);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pain{background:linear-gradient(135deg,rgba(20,25,60,.5),rgba(30,40,80,.5));border-top:1px solid rgba(147,112,219,.1);border-bottom:1px solid rgba(147,112,219,.1)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2.5rem}
+.card{padding:2rem;background:rgba(147,112,219,.05);border:1px solid rgba(147,112,219,.2);border-radius:8px;backdrop-filter:blur(10px)}
+.card h3{color:#00d4ff;margin-bottom:.8rem;font-size:1.2rem}
+.card p{color:#b0b8d4;font-size:.95rem}
+.solution{background:rgba(10,14,39,1)}
+.solution-text{text-align:center;color:#b0b8d4;max-width:700px;margin:0 auto 3rem;font-size:1.05rem}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem}
+.tier{padding:1.5rem;background:linear-gradient(135deg,rgba(147,112,219,.1),rgba(0,212,255,.05));border:1px solid rgba(147,112,219,.3);border-radius:8px;text-align:center}
+.tier h3{color:#00d4ff;margin-bottom:.5rem;font-size:1rem}
+.tier p{color:#b0b8d4;font-size:.9rem}
+.toolkit{background:linear-gradient(135deg,rgba(20,25,60,.5),rgba(30,40,80,.5));border-top:1px solid rgba(147,112,219,.1)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2.5rem}
+.feat{padding:2rem;background:rgba(147,112,219,.08);border:1px solid rgba(147,112,219,.25);border-radius:8px;backdrop-filter:blur(10px);transition:all .3s ease}
+.feat:hover{background:rgba(147,112,219,.12);border-color:rgba(147,112,219,.4);transform:translateY(-4px)}
+.feat-icon{font-size:2.5rem;margin-bottom:1rem}
+.feat h3{color:#00d4ff;font-size:1.3rem;margin-bottom:.8rem}
+.feat p{color:#b0b8d4;font-size:.95rem}
+.proof{background:rgba(10,14,39,1)}
+.testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:2.5rem}
+.t-card{padding:2rem;background:linear-gradient(135deg,rgba(147,112,219,.1),rgba(0,212,255,.05));border:1px solid rgba(147,112,219,.25);border-radius:8px;backdrop-filter:blur(10px)}
+.stars{color:#ffd700;margin-bottom:1rem}
+.t-text{color:#e0e6ff;margin-bottom:1.2rem;font-size:.95rem;font-style:italic}
+.t-author{color:#9370db;font-weight:600;font-size:.9rem}
+.cta-sec{background:linear-gradient(135deg,rgba(147,112,219,.15),rgba(0,212,255,.1));border-top:1px solid rgba(147,112,219,.2);border-bottom:1px solid rgba(147,112,219,.2);text-align:center;padding:3.5rem 2rem}
+.cta-sec h2{margin-bottom:1.5rem}
+.cta-sec p{color:#b0b8d4;font-size:1.05rem;margin-bottom:2rem}
+footer{background:rgba(5,7,20,.9);border-top:1px solid rgba(147,112,219,.1);padding:2rem;text-align:center;color:#6b7d99;font-size:.9rem}
+@media(max-width:768px){h1{font-size:2.2rem}h2{font-size:1.6rem}section{padding:3rem 1.5rem}.hero{min-height:80vh;padding:2rem 1rem}.grid3,.tiers,.features,.testi{gap:1.2rem}.card,.feat,.t-card{padding:1.5rem}}
+</style>
+</head>
+<body>
+<header>
+<div class="h-content">
+<div class="logo">JM Systems</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Stop Working Harder. Start Working With AI.</h1>
+<p class="subtext">Build a $1M/year business by automating every inch of your operations. Join AI-powered entrepreneurs who are scaling faster than ever.</p>
+<a href="#get-toolkit" class="btn">Get the AI Toolkit — $47</a>
+</div>
+</section>
+
+<section class="pain">
+<h2>The Problem</h2>
+<div class="grid3">
+<div class="card">
+<h3>⏱️ Wasting Hours</h3>
+<p>Spending 20+ hours weekly on repetitive tasks that drain your energy and kill productivity.</p>
+</div>
+<div class="card">
+<h3>💸 Expensive Hires</h3>
+<p>Paying $3K-$10K monthly per employee when AI can do the work for pennies on the dollar.</p>
+</div>
+<div class="card">
+<h3>📉 Slow Growth</h3>
+<p>Stuck scaling because you're bottlenecked on operations, not strategy or innovation.</p>
+</div>
+</div>
+</section>
+
+<section class="solution">
+<h2>Our 4-Tier AI System</h2>
+<p class="solution-text">Everything you need to build an AI-powered business, from DIY starter to fully done-for-you enterprise solutions.</p>
+<div class="tiers">
+<div class="tier">
+<h3>$47 Toolkit</h3>
+<p>Self-serve AI prompts, workflows & templates</p>
+</div>
+<div class="tier">
+<h3>$297-$497 Course</h3>
+<p>Learn AI mastery in 30 days</p>
+</div>
+<div class="tier">
+<h3>$3K-$15K Service</h3>
+<p>Done-for-you AI implementation</p>
+</div>
+<div class="tier">
+<h3>$297-$497/mo</h3>
+<p>White-label SaaS platform</p>
+</div>
+</div>
+</section>
+
+<section class="toolkit">
+<h2>What's Inside the AI Toolkit</h2>
+<div class="features">
+<div class="feat">
+<div class="feat-icon">✨</div>
+<h3>50 AI Prompts</h3>
+<p>Copy-paste prompts for sales, marketing, content, customer service, and business ops. Never stare at a blank page again.</p>
+</div>
+<div class="feat">
+<div class="feat-icon">⚙️</div>
+<h3>15 Automation Workflows</h3>
+<p>Ready-to-use Zapier, Make, and ChatGPT workflows that run your business 24/7 without you lifting a finger.</p>
+</div>
+<div class="feat">
+<div class="feat-icon">📋</div>
+<h3>10 Business Templates</h3>
+<p>Professional templates for proposals, contracts, SOPs, and dashboards. White-label and resell for clients.</p>
+</div>
+</div>
+</section>
+
+<section class="proof">
+<h2>What Our Clients Say</h2>
+<div class="testi">
+<div class="t-card">
+<div class="stars">★★★★★</div>
+<p class="t-text">"Implemented the AI workflows in 3 days. Freed up 15 hours per week. Already paid for itself twice over."</p>
+<p class="t-author">— Sarah M., Digital Agency Owner</p>
+</div>
+<div class="t-card">
+<div class="stars">★★★★★</div>
+<p class="t-text">"The templates alone saved us $2,000 in design work. Using the prompts to scale my content 5x. Highly recommend."</p>
+<p class="t-author">— Marcus T., SaaS Founder</p>
+</div>
+<div class="t-card">
+<div class="stars">★★★★★</div>
+<p class="t-text">"Went from 40-hour weeks to 15 hours managing my business. AI is doing the heavy lifting now. Game changer."</p>
+<p class="t-author">— Jessica L., Consultant</p>
+</div>
+</div>
+</section>
+
+<section class="cta-sec">
+<h2>Start Your AI-Powered Business Today</h2>
+<p>Join hundreds of entrepreneurs automating their way to seven figures.</p>
+<a href="#get-toolkit" class="btn">Get the AI Toolkit — $47</a>
+</section>
+
+<footer>
+<p>&copy; 2026 JM Systems. All rights reserved.</p>
+</footer>
+</body>
+</html>
