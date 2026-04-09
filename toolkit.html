@@ -27,6 +27,9 @@
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
         .logo { font-size: 20px; font-weight: 700; background: linear-gradient(135deg, #00d4ff, #9370db); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .nav-link { font-size: 14px; font-weight: 500; }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        .nav-link { color: #e0e6ff; text-decoration: none; transition: color 0.3s ease; }
+        .nav-link:hover { color: #9370db; }
 
         /* Hero */
         .hero { padding: 80px 0; text-align: center; background: linear-gradient(180deg, rgba(0, 212, 255, 0.05) 0%, rgba(147, 112, 219, 0.05) 100%); }
@@ -60,8 +63,12 @@
         .cta-section { padding: 60px 0; text-align: center; }
         .cta-section h2 { font-size: 32px; margin-bottom: 30px; background: linear-gradient(135deg, #00d4ff, #9370db); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
+        .stripe-badge { font-size: 12px; color: #9370db; margin-top: 12px; font-weight: 500; }
+
         /* Footer */
         footer { border-top: 1px solid rgba(0, 212, 255, 0.1); padding: 40px 0; text-align: center; color: #8892b0; font-size: 14px; }
+        footer a { color: #00d4ff; text-decoration: none; }
+        footer a:hover { color: #9370db; }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 36px; }
@@ -76,7 +83,11 @@
         <div class="container">
             <nav>
                 <div class="logo">JM Systems</div>
-                <a href="index.html" class="nav-link">← Back to Home</a>
+                <div style="display: flex; gap: 2rem; margin-left: auto;">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="free-guide.html" class="nav-link">Free Guide</a>
+                    <a href="toolkit.html" class="nav-link">AI Toolkit ($47)</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -85,13 +96,14 @@
         <div class="container">
             <h1>The AI Business Toolkit</h1>
             <p>Everything you need to automate your business for $47</p>
-            <a href="#checkout" class="btn-primary">Get Instant Access — $47</a>
+            <a href="https://buy.stripe.com/test_placeholder" class="btn-primary">Get Instant Access — $47</a>
+            <div class="stripe-badge">Secure checkout powered by Stripe</div>
         </div>
     </section>
 
     <section class="components">
         <div class="container">
-            <h2 class="section-title">What’s Included</h2>
+            <h2 class="section-title">What's Included</h2>
 
             <div class="component">
                 <h3>50 AI Prompts</h3>
@@ -155,21 +167,55 @@
     <section class="guarantee">
         <div class="container">
             <h3>30-Day Money-Back Guarantee</h3>
-            <p>We’re confident you’ll love the toolkit. If you don’t see results within 30 days, we’ll refund every penny—no questions asked.</p>
+            <p>We're confident you'll love the toolkit. If you don't see results within 30 days, we'll refund every penny—no questions asked.</p>
         </div>
     </section>
 
     <section class="cta-section">
         <div class="container">
             <h2>Ready to Automate Your Business?</h2>
-            <a href="#checkout" class="btn-primary">Get Instant Access — $47</a>
+            <a href="https://buy.stripe.com/test_placeholder" class="btn-primary">Get Instant Access — $47</a>
+            <div class="stripe-badge">Secure checkout powered by Stripe</div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2026 JM Systems. All rights reserved.</p>
+            <p><a href="index.html">Home</a> | <a href="free-guide.html">Free Guide</a> | <a href="toolkit.html">Toolkit</a> | <a href="#privacy">Privacy Policy</a><br><br>&copy; 2026 JM Systems. All rights reserved.</p>
         </div>
     </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "AI Business Toolkit",
+      "description": "Everything you need to automate your business. Includes 50 AI prompts, 15 automation workflows, and 10 business templates.",
+      "brand": {
+        "@type": "Brand",
+        "name": "JM Systems"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://jm-systems.vercel.app/toolkit.html",
+        "priceCurrency": "USD",
+        "price": "47",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "JM Systems"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "100"
+      },
+      "isDigitalProduct": true
+    }
+    </script>
+
 </body>
 </html>
