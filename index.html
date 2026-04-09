@@ -21,6 +21,9 @@ body{font-family:'Inter',sans-serif;background:#0a0e27;color:#e0e6ff;line-height
 header{background:rgba(10,14,39,.95);padding:1rem 2rem;border-bottom:1px solid rgba(147,112,219,.1);position:sticky;top:0;z-index:100}
 .h-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#9370db,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+nav{display:flex;gap:2rem;align-items:center}
+.nav-link{color:#e0e6ff;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .3s ease}
+.nav-link:hover{color:#00d4ff}
 section{max-width:1200px;margin:0 auto;padding:4rem 2rem}
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(10,14,39,1),rgba(20,25,60,.8)),radial-gradient(circle at 30% 50%,rgba(147,112,219,.15),transparent 50%);text-align:center}
 .hero-content{max-width:700px}
@@ -64,6 +67,11 @@ footer{background:rgba(5,7,20,.9);border-top:1px solid rgba(147,112,219,.1);padd
 <header>
 <div class="h-content">
 <div class="logo">JM Systems</div>
+<nav>
+<a href="index.html" class="nav-link">Home</a>
+<a href="free-guide.html" class="nav-link">Free Guide</a>
+<a href="toolkit.html" class="nav-link">AI Toolkit ($47)</a>
+</nav>
 </div>
 </header>
 
@@ -88,7 +96,7 @@ footer{background:rgba(5,7,20,.9);border-top:1px solid rgba(147,112,219,.1);padd
 </div>
 <div class="card">
 <h3>📉 Slow Growth</h3>
-<p>Stuck scaling because you’re bottlenecked on operations, not strategy or innovation.</p>
+<p>Stuck scaling because you're bottlenecked on operations, not strategy or innovation.</p>
 </div>
 </div>
 </section>
@@ -117,7 +125,7 @@ footer{background:rgba(5,7,20,.9);border-top:1px solid rgba(147,112,219,.1);padd
 </section>
 
 <section class="toolkit">
-<h2>What’s Inside the AI Toolkit</h2>
+<h2>What's Inside the AI Toolkit</h2>
 <div class="features">
 <div class="feat">
 <div class="feat-icon">✨</div>
@@ -142,30 +150,72 @@ footer{background:rgba(5,7,20,.9);border-top:1px solid rgba(147,112,219,.1);padd
 <div class="testi">
 <div class="t-card">
 <div class="stars">★★★★★</div>
-<p class="t-text">“Implemented the AI workflows in 3 days. Freed up 15 hours per week. Already paid for itself twice over.”</p>
+<p class="t-text">"Implemented the AI workflows in 3 days. Freed up 15 hours per week. Already paid for itself twice over."</p>
 <p class="t-author">— Sarah M., Digital Agency Owner</p>
 </div>
 <div class="t-card">
 <div class="stars">★★★★★</div>
-<p class="t-text">“The templates alone saved us $2,000 in design work. Using the prompts to scale my content 5x. Highly recommend.”</p>
+<p class="t-text">"The templates alone saved us $2,000 in design work. Using the prompts to scale my content 5x. Highly recommend."</p>
 <p class="t-author">— Marcus T., SaaS Founder</p>
 </div>
 <div class="t-card">
 <div class="stars">★★★★★</div>
-<p class="t-text">“Went from 40-hour weeks to 15 hours managing my business. AI is doing the heavy lifting now. Game changer.”</p>
+<p class="t-text">"Went from 40-hour weeks to 15 hours managing my business. AI is doing the heavy lifting now. Game changer."</p>
 <p class="t-author">— Jessica L., Consultant</p>
 </div>
+</div>
+</section>
+
+<section class="proof">
+<h2>Not Ready to Buy?</h2>
+<p class="solution-text">Start with our free guide — 5 AI Systems Every Business Needs in 2026. Discover the exact workflows that save business owners 20+ hours per week.</p>
+<div style="text-align:center;">
+<a href="free-guide.html" class="btn" style="background:linear-gradient(135deg,#00d4ff,#007fbf);color:#0a0e27;">Get the Free Guide</a>
 </div>
 </section>
 
 <section class="cta-sec">
 <h2>Start Your AI-Powered Business Today</h2>
 <p>Join hundreds of entrepreneurs automating their way to seven figures.</p>
-<a href="#get-toolkit" class="btn">Get the AI Toolkit — $47</a>
+<a href="toolkit.html" class="btn">Get the AI Toolkit — $47</a>
 </section>
 
 <footer>
-<p>© 2026 JM Systems. All rights reserved.</p>
+<p><a href="index.html" class="nav-link">Home</a> | <a href="free-guide.html" class="nav-link">Free Guide</a> | <a href="toolkit.html" class="nav-link">Toolkit</a> | <a href="#privacy" class="nav-link">Privacy Policy</a><br><br>&copy; 2026 JM Systems. All rights reserved.</p>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "name": "JM Systems",
+  "description": "AI Business Consulting - Build a $1M/year business by automating with AI",
+  "url": "https://jm-systems.vercel.app",
+  "logo": "https://jm-systems.vercel.app/logo.png",
+  "sameAs": ["https://twitter.com/jmsystems", "https://linkedin.com/company/jmsystems"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "AI Business Toolkit",
+    "price": "47",
+    "priceCurrency": "USD",
+    "url": "https://jm-systems.vercel.app/toolkit.html"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "JM Systems",
+  "url": "https://jm-systems.vercel.app",
+  "description": "AI Business Consulting - Automate your business with AI"
+}
+</script>
+
 </body>
 </html>
