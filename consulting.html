@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Done-For-You AI Systems | JM Systems</title>
+    <meta name="description" content="We build your entire AI infrastructure. Custom Claude workflows, AI automation, and business transformation for high-ticket consulting.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%237C5CFC' width='100' height='100'/><text x='50' y='65' font-size='60' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>JM</text></svg>">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #06070A;
+            color: #E0E0E0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.2; }
+        h2 { font-size: 2.5rem; line-height: 1.3; }
+        h3 { font-size: 1.5rem; }
+        p { font-size: 1rem; opacity: 0.9; }
+
+        /* GRADIENT & COLORS */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #7C5CFC 0%, #00D4FF 100%);
+            --bg-dark: #06070A;
+            --bg-card: #111320;
+            --bg-hover: #161930;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --border-color: rgba(124, 92, 252, 0.2);
+        }
+
+        /* UTILITY CLASSES */
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-border {
+            position: relative;
+            border: 1px solid var(--border-color);
+            background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                        var(--primary-gradient) border-box;
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 30px rgba(124, 92, 252, 0.15),
+                        0 0 60px rgba(0, 212, 255, 0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(6, 7, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero h1 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtext {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 2rem auto 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(124, 92, 252, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(124, 92, 252, 0.4);
+        }
+
+        /* SECTION SPACING */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            font-size: 1.05rem;
+        }
+
+        /* WHO THIS IS FOR */
+        .who-for {
+            background: linear-gradient(180deg, rgba(124, 92, 252, 0.05) 0%, rgba(6, 7, 10, 0) 100%);
+        }
+
+        .who-for-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .who-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .who-card:hover {
+            background: var(--bg-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(124, 92, 252, 0.15);
+        }
+
+        .who-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .who-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            background: linear-gradient(180deg, rgba(0, 212, 255, 0.05) 0%, rgba(6, 7, 10, 0) 100%);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .process-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .process-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .process-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .process-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .process-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* INCLUDED SECTION */
+        .included {
+            background: var(--bg-card);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .included-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(124, 92, 252, 0.05);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .included-item:hover {
+            background: rgba(124, 92, 252, 0.1);
+            transform: translateX(5px);
+        }
+
+        .included-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .included-item h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .included-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* CASE STUDIES */
+        .case-studies {
+            background: linear-gradient(180deg, rgba(124, 92, 252, 0.05) 0%, rgba(6, 7, 10, 0) 100%);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .case-card {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(124, 92, 252, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(124, 92, 252, 0.15);
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case-description {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .case-description h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .case-description p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* INVESTMENT SECTION */
+        .investment {
+            background: linear-gradient(180deg, rgba(0, 212, 255, 0.05) 0%, rgba(6, 7, 10, 0) 100%);
+        }
+
+        .investment-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .investment-intro p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 1rem;
+            font-size: 1.05rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid;
+            border-image: var(--primary-gradient) 1;
+            background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                        var(--primary-gradient) border-box;
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(124, 92, 252, 0.2);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(124, 92, 252, 0.15);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(124, 92, 252, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features li:before {
+            content: 'â';
+            color: #00D4FF;
+            font-weight: 700;
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-cta {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 92, 252, 0.3);
+        }
+
+        /* APPLICATION FORM */
+        .application {
+            background: var(--bg-card);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: var(--bg-hover);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #7C5CFC;
+            background: rgba(124, 92, 252, 0.05);
+            box-shadow: 0 0 20px rgba(124, 92, 252, 0.2);
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(124, 92, 252, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            background: rgba(17, 19, 32, 0.5);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .slide-in {
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .process-grid,
+            .case-grid,
+            .included-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .cta-button {
+                padding: 0.85rem 2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SCHEMA.ORG JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Done-For-You AI Systems",
+      "description": "Premium AI consulting service building custom AI infrastructure, workflows, and automation systems for high-ticket B2B clients.",
+      "provider": {
+        "@type": "Organization",
+        "name": "JM Systems",
+        "url": "https://jmsystems.com",
+        "logo": "https://jmsystems.com/logo.png"
+      },
+      "areaServed": "US",
+      "priceRange": "$5000-$25000+",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Starter Package",
+          "description": "1 department, 3 AI workflows, 30-day support",
+          "price": "5000",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Growth Package",
+          "description": "Full business, 10+ workflows, 60-day support, weekly optimization",
+          "price": "12000",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise Package",
+          "description": "Complete transformation, unlimited workflows, 90-day support, dedicated strategist, ROI guarantee",
+          "price": "25000",
+          "priceCurrency": "USD"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Systems Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Audit & Architecture"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Claude Workflows"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Perplexity Research Systems"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">JM Systems</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="free-guide.html">Free Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>We Build Your Entire AI Infrastructure.<br><span class="hero-gradient-text">You Just Watch Revenue Grow.</span></h1>
+        <p class="hero-subtext">Done-for-you AI systems built specifically for founders and leaders doing $500K+ revenue. We architect, build, and optimize everything. Your team focuses on what matters.</p>
+        <a href="#application" class="cta-button">Apply for Consulting â</a>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section class="who-for">
+        <div class="container">
+            <h2>Who This Is For</h2>
+            <p class="section-subtitle">This isn't for everyone. It's for ambitious businesses ready to transform.</p>
+
+            <div class="who-for-grid">
+                <div class="who-card fade-in">
+                    <h3>$500K+ Revenue</h3>
+                    <p>You've proven product-market fit and have the resources to invest in infrastructure that scales. Small experiments don't interest usâwe build systems that transform entire operations.</p>
+                </div>
+
+                <div class="who-card fade-in">
+                    <h3>Efficiency-Obsessed</h3>
+                    <p>Every hour your team wastes on manual work costs real money. You want to reclaim 10-20+ hours per week and redirect that energy toward growth and strategy.</p>
+                </div>
+
+                <div class="who-card fade-in">
+                    <h3>Vision-Aligned</h3>
+                    <p>You see the future with AI. You know your biggest competitive advantage isn't featuresâit's having AI systems competitors can't replicate or match.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+        <div class="container">
+            <h2>The 4-Step Process</h2>
+            <p class="section-subtitle">From discovery to revenue impact in 60-90 days</p>
+
+            <div class="process-grid">
+                <div class="process-card slide-in">
+                    <div class="process-number">1</div>
+                    <h3>Discovery Audit</h3>
+                    <p>We interview your team, map workflows, and identify your biggest friction points. This is where we uncover the 20% of processes that consume 80% of your time.</p>
+                </div>
+
+                <div class="process-card slide-in">
+                    <div class="process-number">2</div>
+                    <h3>Architecture Design</h3>
+                    <p>Custom system blueprints using Claude, Cursor, Perplexity, ElevenLabs, Midjourney, and Runway. We design every integration, workflow, and automation touchpoint.</p>
+                </div>
+
+                <div class="process-card slide-in">
+                    <div class="process-number">3</div>
+                    <h3>Build & Deploy</h3>
+                    <p>Our team builds production-ready systems. Custom tools, trained AI agents, integrated workflows. Everything is tested, documented, and deployed with your team.</p>
+                </div>
+
+                <div class="process-card slide-in">
+                    <div class="process-number">4</div>
+                    <h3>Optimize & Scale</h3>
+                    <p>We monitor performance, gather feedback, and continuously improve. Your systems get smarter. Your team gets faster. Revenue compounds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="included">
+        <div class="container">
+            <h2>Everything's Included</h2>
+            <p class="section-subtitle">Premium infrastructure, zero additional costs</p>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>Full AI Audit</h4>
+                        <p>Deep analysis of your current workflows, bottlenecks, and automation opportunities. Strategic roadmap included.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>Custom Claude Workflows</h4>
+                        <p>Specialized AI workflows powered by Claude, fine-tuned for your exact use cases and processes.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>Cursor-Built Tools</h4>
+                        <p>Custom applications and integrations built with Cursor. Everything is production-ready and scalable.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>Perplexity Research Systems</h4>
+                        <p>Intelligent research and analysis pipelines that augment your decision-making with real-time data.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>Midjourney Brand Assets</h4>
+                        <p>AI-generated brand assets, graphics, and visual content for marketing and communications.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>ElevenLabs Voice Systems</h4>
+                        <p>Custom voice AI for customer interactions, training content, and automated communications.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>Runway Video Content</h4>
+                        <p>AI-powered video generation and editing for social, marketing, and training materials.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>90-Day Optimization</h4>
+                        <p>Quarterly performance reviews, continuous improvements, and system refinement to maximize ROI.</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-icon">â</div>
+                    <div>
+                        <h4>Team Training</h4>
+                        <p>Complete onboarding and training so your team owns and can extend the systems we build.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="case-studies">
+        <div class="container">
+            <h2>Real Results</h2>
+            <p class="section-subtitle">From companies like yours</p>
+
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">340</span>
+                            <span class="metric-label">Hours Saved</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">$180K</span>
+                            <span class="metric-label">Revenue Impact</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">65%</span>
+                            <span class="metric-label">Cost Reduction</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        <h3>SaaS Platform</h3>
+                        <p>Automated customer onboarding and support workflows. Redirected team from reactive support to product development. Generated $180K in new revenue from improved customer experience and reduced churn.</p>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">520</span>
+                            <span class="metric-label">Hours Saved</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">$420K</span>
+                            <span class="metric-label">Revenue Impact</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">80%</span>
+                            <span class="metric-label">Cost Reduction</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        <h3>Digital Agency</h3>
+                        <p>Built AI-powered content creation and project management systems. Scaled without hiring. Client delivery improved. Increased capacity by 3x while reducing operational costs by 80%.</p>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">280</span>
+                            <span class="metric-label">Hours Saved</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">$250K</span>
+                            <span class="metric-label">Revenue Impact</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">72%</span>
+                            <span class="metric-label">Cost Reduction</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        <h3>E-commerce Brand</h3>
+                        <p>Implemented AI-driven customer research, inventory optimization, and email marketing systems. Improved conversion rates and reduced customer acquisition costs. Revenue grew 35% YoY.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT SECTION -->
+    <section class="investment">
+        <div class="container">
+            <div class="investment-intro">
+                <h2>Your Investment</h2>
+                <p>Transparent pricing. Built on value, not hours. Choose the level that matches your ambition.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Starter</div>
+                    <div class="pricing-amount">$5,000</div>
+                    <div class="pricing-period">one-time investment</div>
+
+                    <ul class="pricing-features">
+                        <li>1 Department</li>
+                        <li>3 AI Workflows</li>
+                        <li>Discovery & Audit</li>
+                        <li>Custom Claude Setup</li>
+                        <li>30-Day Support</li>
+                    </ul>
+
+                    <button class="pricing-cta" onclick="scrollToApplication()">Start Here</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-title">Growth</div>
+                    <div class="pricing-amount">$12,000</div>
+                    <div class="pricing-period">one-time investment</div>
+
+                    <ul class="pricing-features">
+                        <li>Full Business Setup</li>
+                        <li>10+ AI Workflows</li>
+                        <li>Multi-tool Integration</li>
+                        <li>Custom Tools & Apps</li>
+                        <li>60-Day Support</li>
+                        <li>Weekly Optimization Calls</li>
+                    </ul>
+
+                    <button class="pricing-cta" onclick="scrollToApplication()">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-title">Enterprise</div>
+                    <div class="pricing-amount">$25K+</div>
+                    <div class="pricing-period">custom engagement</div>
+
+                    <ul class="pricing-features">
+                        <li>Complete Transformation</li>
+                        <li>Unlimited Workflows</li>
+                        <li>White-glove Integration</li>
+                        <li>Advanced Customization</li>
+                        <li>90-Day Support</li>
+                        <li>Dedicated Strategist</li>
+                        <li>ROI Guarantee</li>
+                    </ul>
+
+                    <button class="pricing-cta" onclick="scrollToApplication()">Schedule Call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="application" id="application">
+        <div class="container">
+            <h2>Apply Now</h2>
+            <p class="section-subtitle">Tell us about your business. We'll evaluate fit and follow up within 24 hours.</p>
+
+            <div class="form-container">
+                <form action="https://formsubmit.co/jmtrades1990@gmail.com" method="POST">
+                    <!-- FormSubmit hidden fields -->
+                    <input type="hidden" name="_subject" value="HIGH-TICKET APPLICATION">
+                    <input type="hidden" name="_next" value="https://jmsystems.com/index.html?thankyou=consulting">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Business Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="revenue">Annual Revenue *</label>
+                        <select id="revenue" name="revenue" required>
+                            <option value="">Select your revenue range</option>
+                            <option value="$500K - $1M">$500K - $1M</option>
+                            <option value="$1M - $2M">$1M - $2M</option>
+                            <option value="$2M - $5M">$2M - $5M</option>
+                            <option value="$5M - $10M">$5M - $10M</option>
+                            <option value="$10M+">$10M+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="challenge">What's Your Biggest Challenge Right Now? *</label>
+                        <textarea id="challenge" name="challenge" placeholder="Describe the main problem you're trying to solve..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <button type="submit" class="form-submit">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>JM Systems</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Premium AI infrastructure and done-for-you consulting for ambitious businesses.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="toolkit.html">Toolkit</a>
+                    <a href="free-guide.html">Free Guide</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="#application">Apply for Consulting</a>
+                    <a href="index.html">Learn More</a>
+                    <a href="#investment">View Pricing</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 JM Systems. All rights reserved. | Premium AI Consulting</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to application
+        function scrollToApplication() {
+            const applicationSection = document.getElementById('application');
+            applicationSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideInUp 0.8s ease-out forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.who-card, .process-card, .case-card, .included-item, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Handle form submission feedback
+        document.querySelector('form')?.addEventListener('submit', function(e) {
+            // Form validation happens automatically via HTML5
+        });
+    </script>
+</body>
+</html>
