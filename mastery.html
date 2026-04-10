@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mastery Program - 12-Week Intensive | JM Systems</title>
+    <meta name="description" content="Master every AI tool in 12 weeks. Build systems that run without you. Limited to 20 spots per cohort.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org for Course -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "AI Mastery Program",
+      "description": "A 12-week intensive program to master every AI tool and build systems that run without you.",
+      "provider": {
+        "@type": "Organization",
+        "name": "JM Systems"
+      },
+      "duration": "P12W",
+      "numberOfCredits": 12,
+      "offers": {
+        "@type": "Offer",
+        "price": "1497",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/LimitedAvailability"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "name": "AI Mastery Program - Next Cohort",
+        "courseMode": "Hybrid",
+        "inLanguage": "en"
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #06070A;
+            --bg-card: #111320;
+            --bg-hover: #161930;
+            --gradient: linear-gradient(135deg, #7C5CFC 0%, #00D4FF 100%);
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --accent: #7C5CFC;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(6, 7, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(124, 92, 252, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .urgency-badge {
+            display: inline-block;
+            background: rgba(124, 92, 252, 0.15);
+            border: 1px solid rgba(124, 92, 252, 0.3);
+            color: #00D4FF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 10px 30px rgba(124, 92, 252, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(124, 92, 252, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Modules Section */
+        .modules {
+            padding: 100px 2rem;
+            background: linear-gradient(180deg, rgba(124, 92, 252, 0.05) 0%, transparent 100%);
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .module-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .module-card:hover {
+            background: var(--bg-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .module-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .module-weeks {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .module-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .module-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(124, 92, 252, 0.15);
+            color: #00D4FF;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Included Features */
+        .included {
+            padding: 100px 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(124, 92, 252, 0.15);
+            border-radius: 8px;
+        }
+
+        .feature-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Results Section */
+        .results {
+            padding: 100px 2rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(124, 92, 252, 0.05) 100%);
+        }
+
+        .results-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .results-intro p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: var(--bg-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 2rem;
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .price-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .price-card.featured {
+            border: 2px solid;
+            border-image: var(--gradient) 1;
+            transform: scale(1.05);
+        }
+
+        .price-card:hover {
+            background: var(--bg-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .price-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 20px 60px rgba(124, 92, 252, 0.3);
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .price-amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .price-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .price-card .btn {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .price-features li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .price-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 2rem;
+            background: linear-gradient(180deg, rgba(124, 92, 252, 0.05) 0%, transparent 100%);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: var(--bg-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(124, 92, 252, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin: 100px 2rem;
+        }
+
+        .final-cta h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .btn-primary {
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(6, 7, 10, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 80px 1rem 60px;
+            }
+
+            .modules, .included, .results, .pricing, .faq, .final-cta {
+                padding: 60px 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .trust-indicators {
+                gap: 1.5rem;
+                flex-direction: column;
+                border-top: none;
+                padding-top: 0;
+            }
+
+            .price-card.featured {
+                transform: scale(1);
+            }
+
+            .price-card.featured:hover {
+                transform: translateY(-10px);
+            }
+
+            .final-cta {
+                margin: 60px 1rem;
+                padding: 60px 1.5rem;
+            }
+
+            .final-cta h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">JM Systems</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="free-guide.html">Free Guide</a></li>
+                <li><a href="consulting.html">Consulting</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="urgency-badge">â° Next Cohort: Limited to 20 Spots</div>
+            <h1>Master Every AI Tool. Build Systems That Run Without You. In 12 Weeks.</h1>
+            <p>Join the AI Mastery Program and transform from AI user to AI operator. Learn the exact systems top founders and executives use to automate their entire business.</p>
+
+            <div class="cta-buttons">
+                <a href="https://buy.stripe.com/fZu28q0QmbhseGhcRoco001" class="btn btn-primary">Enroll Now - $1,497</a>
+                <a href="#modules" class="btn btn-secondary">See What You'll Learn</a>
+            </div>
+
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <span class="trust-icon">â</span>
+                    <span>12 Live Weekly Sessions</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">â</span>
+                    <span>1-on-1 Strategy Calls</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">â</span>
+                    <span>Lifetime Access & Updates</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">â</span>
+                    <span>Certificate of Completion</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Master -->
+    <section class="modules" id="modules">
+        <div class="container">
+            <h2 class="section-title">What You'll Master</h2>
+
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-weeks">WEEK 1-2</div>
+                    <h3 class="module-title">Claude Mastery</h3>
+                    <p class="module-description">Master the world's most capable AI for business. Learn advanced prompting, system prompts, and proven business frameworks.</p>
+                    <div class="module-skills">
+                        <span class="skill-tag">Advanced Prompting</span>
+                        <span class="skill-tag">System Design</span>
+                        <span class="skill-tag">Business Frameworks</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-weeks">WEEK 3-4</div>
+                    <h3 class="module-title">Perplexity Research Systems</h3>
+                    <p class="module-description">Build lead generation machines, competitive intelligence systems, and market research workflows that scale.</p>
+                    <div class="module-skills">
+                        <span class="skill-tag">Lead Generation</span>
+                        <span class="skill-tag">Competitive Intel</span>
+                        <span class="skill-tag">Market Research</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-weeks">WEEK 5-6</div>
+                    <h3 class="module-title">Cursor & v0 No-Code Building</h3>
+                    <p class="module-description">Create apps, websites, and custom tools without writing a single line of code. Ship in days instead of weeks.</p>
+                    <div class="module-skills">
+                        <span class="skill-tag">App Development</span>
+                        <span class="skill-tag">Web Design</span>
+                        <span class="skill-tag">MVP Launch</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-weeks">WEEK 7-8</div>
+                    <h3 class="module-title">Midjourney & Visual AI</h3>
+                    <p class="module-description">Generate professional brand assets, marketing visuals, and ad creatives at scale. Build a month's worth of content in hours.</p>
+                    <div class="module-skills">
+                        <span class="skill-tag">Brand Assets</span>
+                        <span class="skill-tag">Marketing Visuals</span>
+                        <span class="skill-tag">Ad Creative</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-weeks">WEEK 9-10</div>
+                    <h3 class="module-title">ElevenLabs & Runway Media</h3>
+                    <p class="module-description">Master voice synthesis, video production, and podcast creation. Launch multimedia content that engages at scale.</p>
+                    <div class="module-skills">
+                        <span class="skill-tag">Voice Content</span>
+                        <span class="skill-tag">Video Production</span>
+                        <span class="skill-tag">Podcasts</span>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-weeks">WEEK 11-12</div>
+                    <h3 class="module-title">Integration & Scaling</h3>
+                    <p class="module-description">Connect all your AI tools into automated workflows. Build SOPs, delegate to your team, and scale without hiring.</p>
+                    <div class="module-skills">
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">SOPs</span>
+                        <span class="skill-tag">Team Scaling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="included">
+        <div class="container">
+            <h2 class="section-title">What's Included</h2>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">ð</div>
+                    <div class="feature-content">
+                        <h3>12 Weekly Live Sessions</h3>
+                        <p>Deep-dive workshops with recorded replays. Never miss content and learn at your own pace.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">ð¯</div>
+                    <div class="feature-content">
+                        <h3>1-on-1 Strategy Calls</h3>
+                        <p>Get personalized guidance on how to apply AI to your specific business model and goals.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">ð¥</div>
+                    <div class="feature-content">
+                        <h3>Private Community</h3>
+                        <p>Network with 20 high-performing entrepreneurs and executives in your cohort. Share wins and learn together.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">ð</div>
+                    <div class="feature-content">
+                        <h3>All Templates & Prompts</h3>
+                        <p>50+ battle-tested prompts, workflow templates, and SOP frameworks you can use immediately.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">â¾ï¸</div>
+                    <div class="feature-content">
+                        <h3>Lifetime Access & Updates</h3>
+                        <p>Once you enroll, you have lifetime access. Updates included forever as the program evolves.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">ð</div>
+                    <div class="feature-content">
+                        <h3>Certificate of Completion</h3>
+                        <p>Earn a professional certificate to showcase your AI mastery to clients and team members.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results">
+        <div class="container">
+            <h2 class="section-title">What Graduates Achieve</h2>
+
+            <div class="results-intro">
+                <p>Our cohort members consistently see transformative results. Here's what's happening in the first 90 days after completing the program.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">87%</div>
+                    <div class="stat-label">Launch a new AI-powered project or service</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">52hrs</div>
+                    <div class="stat-label">Average time saved per week through automation</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-label">Content creation increase with visual AI</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">$40K+</div>
+                    <div class="stat-label">Average revenue impact in first year</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="buy-mastery">
+        <div class="container">
+            <h2 class="section-title">Investment & Enrollment</h2>
+
+            <div class="pricing-container">
+                <div class="price-card">
+                    <div class="price-title">Pay in Full</div>
+                    <div class="price-amount">$1,497</div>
+                    <p class="price-description">One-time payment. Best value.</p>
+                    <a href="https://buy.stripe.com/fZu28q0QmbhseGhcRoco001" class="btn btn-primary">Enroll Now</a>
+                    <ul class="price-features">
+                        <li>â 12 weekly sessions</li>
+                        <li>â 1-on-1 calls</li>
+                        <li>â Private community</li>
+                        <li>â All templates & prompts</li>
+                        <li>â Lifetime access</li>
+                        <li>â Certificate</li>
+                    </ul>
+                </div>
+
+                <div class="price-card featured">
+                    <div class="price-badge">Most Popular</div>
+                    <div class="price-title">Payment Plan</div>
+                    <div class="price-amount">$549</div>
+                    <p class="price-description">3 monthly payments. Same access.</p>
+                    <a href="https://buy.stripe.com/7sY8wO6aG2KW55H6t0co002" class="btn btn-primary">Enroll Now</a>
+                    <ul class="price-features">
+                        <li>â 12 weekly sessions</li>
+                        <li>â 1-on-1 calls</li>
+                        <li>â Private community</li>
+                        <li>â All templates & prompts</li>
+                        <li>â Lifetime access</li>
+                        <li>â Certificate</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.95rem;">
+                <p>Limited to 20 spots per cohort. Next cohort starts in 14 days.</p>
+                <p>30-day money-back guarantee if you don't find value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need prior AI experience to join?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        No. This program is designed for entrepreneurs and executives who want to learn AI from the ground up. We cover everything from basic concepts to advanced applications. The only requirement is a willingness to learn and apply what you discover.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I can't attend all the live sessions?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        All live sessions are recorded and available to rewatch. You'll have lifetime access to all materials, so you can go through the program at your own pace. However, the live sessions include Q&A and community interaction that adds significant value, so we encourage attending live when possible.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How much time per week should I commit?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Plan for 5-7 hours per week. This includes the 2-hour live session, hands-on practice with the tools, and community engagement. The more you practice, the faster you'll master these systems, but the program is designed to fit into a busy schedule.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I'm not satisfied with the program?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        We offer a 30-day money-back guarantee. If you complete the first month and don't see the value, simply request a full refund. No questions asked. We're confident in the program's content and results.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer group discounts or team licensing?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. If you want to enroll your team or multiple colleagues, we offer group rates starting at 3 people. Email us for a custom quote. This is a great way to build AI expertise across your organization.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Master AI and Build Systems That Scale?</h2>
+            <p>The next cohort is limited to 20 people and enrollment closes in 2 weeks. Join the entrepreneurs and executives who are already using AI to multiply their impact without working longer hours.</p>
+            <a href="https://buy.stripe.com/fZu28q0QmbhseGhcRoco001" class="btn btn-primary">Enroll in AI Mastery Program â $1,497</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 JM Systems. All rights reserved.</p>
+            <p>AI Mastery Program | <a href="#" style="color: var(--text-secondary); text-decoration: none;">Terms</a> | <a href="#" style="color: var(--text-secondary); text-decoration: none;">Privacy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Button click tracking (placeholder for Stripe integration)
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            if (btn.getAttribute('href') === '#buy-mastery') {
+                btn.addEventListener('click', function(e) {
+                    // Replace #buy-mastery with your actual Stripe checkout URL
+                    console.log('Redirect to Stripe checkout');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
