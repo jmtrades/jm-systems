@@ -513,5 +513,35 @@
     </div>
 </footer>
 
+<script>
+// =====================================================
+// STRIPE PAYMENT LINK - CHANGE THIS ONE LINE:
+// =====================================================
+const STRIPE_LINK = 'https://buy.stripe.com/YOUR_LINK_HERE';
+// =====================================================
+// After creating your Stripe Payment Link, paste it above.
+// All buy buttons on this page will automatically update.
+// =====================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buyLinks = document.querySelectorAll('a[href="#buy"]');
+    buyLinks.forEach(function(link) {
+        if (STRIPE_LINK.includes('YOUR_LINK_HERE')) {
+            link.href = 'mailto:jmtrades1990@gmail.com?subject=AI%20Business%20Toolkit%20Purchase&body=I%20want%20to%20purchase%20the%20AI%20Business%20Toolkit%20($197).%20Please%20send%20me%20the%20payment%20link.';
+        } else {
+            link.href = STRIPE_LINK;
+        }
+    });
+    // Also update the #buy anchor link
+    const buyAnchor = document.getElementById('buy');
+    if (buyAnchor) {
+        if (STRIPE_LINK.includes('YOUR_LINK_HERE')) {
+            buyAnchor.href = 'mailto:jmtrades1990@gmail.com?subject=AI%20Business%20Toolkit%20Purchase&body=I%20want%20to%20purchase%20the%20AI%20Business%20Toolkit%20($197).%20Please%20send%20me%20the%20payment%20link.';
+        } else {
+            buyAnchor.href = STRIPE_LINK;
+        }
+    }
+});
+</script>
 </body>
 </html>
