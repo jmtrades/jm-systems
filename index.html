@@ -1,138 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>JM Systems - AI Business Consulting</title>
-<meta name="description" content="JM Systems helps businesses automate with AI. Get our $47 AI Business Toolkit with 50 prompts, 15 workflows, and 10 templates to scale your business.">
-<meta name="keywords" content="AI business automation, AI toolkit, business prompts, automation workflows, AI consulting, scale business with AI">
-<meta name="author" content="JM Systems">
-<meta property="og:title" content="JM Systems - AI Business Consulting">
-<meta property="og:description" content="Stop working harder. Start working with AI. Build a $1M/year business by automating every inch of your operations.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://jmtrades.github.io/jm-systems">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="JM Systems - AI Business Consulting">
-<meta name="twitter:description" content="Build a $1M/year business by automating every inch of your operations with AI.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0a0e27;color:#e0e6ff;line-height:1.6}
-header{background:rgba(10,14,39,.95);padding:1rem 2rem;border-bottom:1px solid rgba(147,112,219,.1);position:sticky;top:0;z-index:100}
-.h-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#9370db,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-nav{display:flex;gap:2rem;align-items:center}
-.nav-link{color:#e0e6ff;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .3s ease}
-.nav-link:hover{color:#00d4ff}
-section{max-width:1200px;margin:0 auto;padding:4rem 2rem}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(10,14,39,1),rgba(20,25,60,.8)),radial-gradient(circle at 30% 50%,rgba(147,112,219,.15),transparent 50%);text-align:center}
-.hero-content{max-width:700px}
-h1{font-size:3.5rem;font-weight:800;margin-bottom:1.5rem;background:linear-gradient(135deg,#fff,#9370db,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
-.subtext{font-size:1.1rem;color:#b0b8d4;margin-bottom:2rem;line-height:1.8}
-.btn{display:inline-block;padding:.95rem 2.5rem;background:linear-gradient(135deg,#9370db,#6b5ccc);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;border:none;cursor:pointer;transition:all .3s ease}
-.btn:hover{background:linear-gradient(135deg,#a88edb,#7d6dd9);transform:translateY(-2px);box-shadow:0 10px 30px rgba(147,112,219,.3)}
-h2{font-size:2.2rem;font-weight:700;margin-bottom:3rem;text-align:center;background:linear-gradient(135deg,#fff,#9370db);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.pain{background:linear-gradient(135deg,rgba(20,25,60,.5),rgba(30,40,80,.5));border-top:1px solid rgba(147,112,219,.1);border-bottom:1px solid rgba(147,112,219,.1)}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2.5rem}
-.card{padding:2rem;background:rgba(147,112,219,.05);border:1px solid rgba(147,112,219,.2);border-radius:8px;backdrop-filter:blur(10px)}
-.card h3{color:#00d4ff;margin-bottom:.8rem;font-size:1.2rem}
-.card p{color:#b0b8d4;font-size:.95rem}
-.solution{background:rgba(10,14,39,1)}
-.solution-text{text-align:center;color:#b0b8d4;max-width:700px;margin:0 auto 3rem;font-size:1.05rem}
-.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem}
-.tier{padding:1.5rem;background:linear-gradient(135deg,rgba(147,112,219,.1),rgba(0,212,255,.05));border:1px solid rgba(147,112,219,.3);border-radius:8px;text-align:center}
-.tier h3{color:#00d4ff;margin-bottom:.5rem;font-size:1rem}
-.tier p{color:#b0b8d4;font-size:.9rem}
-.toolkit{background:linear-gradient(135deg,rgba(20,25,60,.5),rgba(30,40,80,.5));border-top:1px solid rgba(147,112,219,.1)}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2.5rem}
-.feat{padding:2rem;background:rgba(147,112,219,.08);border:1px solid rgba(147,112,219,.25);border-radius:8px;backdrop-filter:blur(10px);transition:all .3s ease}
-.feat:hover{background:rgba(147,112,219,.12);border-color:rgba(147,112,219,.4);transform:translateY(-4px)}
-.feat-icon{font-size:2.5rem;margin-bottom:1rem}
-.feat h3{color:#00d4ff;font-size:1.3rem;margin-bottom:.8rem}
-.feat p{color:#b0b8d4;font-size:.95rem}
-.proof{background:rgba(10,14,39,1)}
-.testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:2.5rem}
-.t-card{padding:2rem;background:linear-gradient(135deg,rgba(147,112,219,.1),rgba(0,212,255,.05));border:1px solid rgba(147,112,219,.25);border-radius:8px;backdrop-filter:blur(10px)}
-.stars{color:#ffd700;margin-bottom:1rem}
-.t-text{color:#e0e6ff;margin-bottom:1.2rem;font-size:.95rem;font-style:italic}
-.t-author{color:#9370db;font-weight:600;font-size:.9rem}
-.cta-sec{background:linear-gradient(135deg,rgba(147,112,219,.15),rgba(0,212,255,.1));border-top:1px solid rgba(147,112,219,.2);border-bottom:1px solid rgba(147,112,219,.2);text-align:center;padding:3.5rem 2rem}
-.cta-sec h2{margin-bottom:1.5rem}
-.cta-sec p{color:#b0b8d4;font-size:1.05rem;margin-bottom:2rem}
-footer{background:rgba(5,7,20,.9);border-top:1px solid rgba(147,112,219,.1);padding:2rem;text-align:center;color:#6b7d99;font-size:.9rem}
-@media(max-width:768px){h1{font-size:2.2rem}h2{font-size:1.6rem}section{padding:3rem 1.5rem}.hero{min-height:80vh;padding:2rem 1rem}.grid3,.tiers,.features,.testi{gap:1.2rem}.card,.feat,.t-card{padding:1.5rem}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Systems &#8212; Elite AI Business Consulting | Huntsville, AL</title>
+    <meta name="description" content="JM Systems builds done-for-you AI systems that replace entire departments. Elite consulting powered by Claude, Perplexity, Cursor &#38; the best AI tools on the planet.">
+    <meta name="keywords" content="AI consulting, AI business systems, Claude AI, Perplexity AI, elite AI automation, Huntsville AI, business automation">
+    <meta name="author" content="JM Systems">
+    <meta property="og:title" content="JM Systems &#8212; Elite AI Business Consulting">
+    <meta property="og:description" content="We build AI systems that replace entire departments. Elite consulting for businesses ready to dominate with AI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jmtrades.github.io/jm-systems/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JM Systems &#8212; Elite AI Business Consulting">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #06070A;
+            --bg-secondary: #0C0E14;
+            --bg-card: #111320;
+            --bg-card-hover: #161930;
+            --accent-1: #7C5CFC;
+            --accent-2: #00D4FF;
+            --accent-3: #FF6B6B;
+            --accent-gradient: linear-gradient(135deg, #7C5CFC 0%, #00D4FF 100%);
+            --text-primary: #F0F0F5;
+            --text-secondary: #9CA3AF;
+            --text-muted: #6B7280;
+            --border: rgba(124, 92, 252, 0.15);
+            --glow: rgba(124, 92, 252, 0.3);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(6,7,10,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem; font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo span { font-weight: 400; opacity: 0.7; -webkit-text-fill-color: var(--text-secondary); }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;
+            font-weight: 500; transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-cta {
+            background: var(--accent-gradient) !important;
+            color: #fff !important;
+            padding: 10px 24px !important;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+        }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--glow); }
+
+        /* HERO */
+        .hero {
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(124,92,252,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(124,92,252,0.1);
+            border: 1px solid rgba(124,92,252,0.3);
+            border-radius: 100px; padding: 8px 20px;
+            font-size: 0.85rem; color: var(--accent-1);
+            font-weight: 600; margin-bottom: 32px;
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: #22C55E;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+        }
+        .hero h1 .gradient-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.25rem; color: var(--text-secondary);
+            max-width: 640px; margin-bottom: 40px; line-height: 1.8;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--accent-gradient);
+            color: #fff; padding: 16px 32px; border-radius: 12px;
+            text-decoration: none; font-weight: 700; font-size: 1.05rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none; cursor: pointer;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--glow); }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent;
+            color: var(--text-primary); padding: 16px 32px; border-radius: 12px;
+            text-decoration: none; font-weight: 600; font-size: 1.05rem;
+            border: 1px solid var(--border);
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .btn-secondary:hover { border-color: var(--accent-1); background: rgba(124,92,252,0.05); }
+
+        /* TRUST BAR */
+        .trust-bar {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .trust-bar p {
+            text-align: center; color: var(--text-muted);
+            font-size: 0.85rem; text-transform: uppercase;
+            letter-spacing: 2px; font-weight: 600; margin-bottom: 32px;
+        }
+        .tool-logos {
+            display: flex; justify-content: center; gap: 48px;
+            flex-wrap: wrap; align-items: center;
+        }
+        .tool-logos .tool {
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            color: var(--text-muted); font-size: 0.8rem; font-weight: 500;
+            transition: color 0.3s;
+        }
+        .tool-logos .tool:hover { color: var(--text-secondary); }
+        .tool-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        /* SECTIONS */
+        section { padding: 100px 0; }
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem; text-transform: uppercase;
+            letter-spacing: 3px; color: var(--accent-1);
+            font-weight: 700; margin-bottom: 16px;
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700; margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .section-subtitle {
+            font-size: 1.1rem; color: var(--text-secondary);
+            max-width: 600px; margin-bottom: 60px;
+        }
+
+        /* PROBLEM SECTION */
+        .problem-section { background: var(--bg-secondary); }
+        .problem-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .problem-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px; padding: 32px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .problem-card:hover { transform: translateY(-4px); border-color: rgba(255,107,107,0.4); }
+        .problem-card .icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: rgba(255,107,107,0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; margin-bottom: 20px;
+        }
+        .problem-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+        .problem-card p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* SOLUTION / TIERS */
+        .tiers-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .tier-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px; padding: 36px;
+            position: relative; overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .tier-card:hover { transform: translateY(-4px); border-color: var(--accent-1); }
+        .tier-card.featured {
+            border-color: var(--accent-1);
+            background: linear-gradient(180deg, rgba(124,92,252,0.08) 0%, var(--bg-card) 100%);
+        }
+        .tier-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute; top: 16px; right: -32px;
+            background: var(--accent-gradient);
+            color: #fff; font-size: 0.65rem; font-weight: 800;
+            padding: 4px 40px; transform: rotate(45deg);
+            letter-spacing: 1px;
+        }
+        .tier-number {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 32px; height: 32px; border-radius: 8px;
+            background: rgba(124,92,252,0.15);
+            color: var(--accent-1); font-weight: 800;
+            font-size: 0.85rem; margin-bottom: 16px;
+        }
+        .tier-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+        .tier-price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem; font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .tier-price span { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; }
+        .tier-card p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; }
+        .tier-features { list-style: none; margin-bottom: 24px; }
+        .tier-features li {
+            padding: 6px 0; color: var(--text-secondary);
+            font-size: 0.9rem; display: flex; align-items: start; gap: 10px;
+        }
+        .tier-features li::before {
+            content: '&#10003;'; color: #22C55E; font-weight: 700;
+            flex-shrink: 0; margin-top: 2px;
+        }
+        .tier-btn {
+            display: block; width: 100%; padding: 14px;
+            border-radius: 10px; text-align: center;
+            text-decoration: none; font-weight: 700;
+            font-size: 0.95rem; transition: all 0.3s;
+        }
+        .tier-btn-primary {
+            background: var(--accent-gradient); color: #fff;
+        }
+        .tier-btn-primary:hover { box-shadow: 0 4px 20px var(--glow); transform: translateY(-1px); }
+        .tier-btn-secondary {
+            background: transparent; color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        .tier-btn-secondary:hover { border-color: var(--accent-1); background: rgba(124,92,252,0.05); }
+
+        /* TOOLS SECTION */
+        .tools-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px; padding: 28px;
+            display: flex; gap: 16px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .tool-card:hover { transform: translateY(-2px); border-color: var(--accent-2); }
+        .tool-card .tc-icon {
+            width: 52px; height: 52px; border-radius: 14px;
+            background: rgba(0,212,255,0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; flex-shrink: 0;
+        }
+        .tool-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+        .tool-card p { color: var(--text-secondary); font-size: 0.88rem; }
+
+        /* RESULTS */
+        .results-section { background: var(--bg-secondary); }
+        .results-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .result-card {
+            text-align: center; padding: 40px 24px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+        .result-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem; font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        .result-card p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 16px; padding: 32px;
+        }
+        .stars { color: #FBBF24; font-size: 1.1rem; margin-bottom: 16px; letter-spacing: 2px; }
+        .testimonial-card blockquote {
+            color: var(--text-secondary); font-size: 0.95rem;
+            font-style: italic; margin-bottom: 20px; line-height: 1.7;
+        }
+        .testimonial-author {
+            display: flex; align-items: center; gap: 12px;
+        }
+        .testimonial-avatar {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--accent-gradient);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.1rem; color: #fff;
+        }
+        .testimonial-author .name { font-weight: 600; font-size: 0.9rem; }
+        .testimonial-author .role { color: var(--text-muted); font-size: 0.8rem; }
+
+        /* CTA */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(124,92,252,0.08) 50%, var(--bg-primary) 100%);
+            text-align: center;
+        }
+        .cta-section .section-title { max-width: 700px; margin: 0 auto 20px; }
+        .cta-section .section-subtitle { max-width: 500px; margin: 0 auto 40px; }
+
+        /* FOOTER */
+        footer {
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px; margin-bottom: 48px;
+        }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; margin-top: 12px; max-width: 320px; }
+        .footer-col h4 {
+            font-size: 0.8rem; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--text-muted);
+            margin-bottom: 16px; font-weight: 700;
+        }
+        .footer-col a {
+            display: block; color: var(--text-secondary);
+            text-decoration: none; font-size: 0.9rem;
+            padding: 4px 0; transition: color 0.3s;
+        }
+        .footer-col a:hover { color: var(--text-primary); }
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            display: flex; justify-content: space-between;
+            color: var(--text-muted); font-size: 0.8rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { gap: 16px; }
+            .hero { padding: 120px 0 60px; }
+            .hero-buttons { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 8px; }
+            .tool-logos { gap: 24px; }
+            .tiers-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        }
+        @media (max-width: 480px) {
+            .nav-links a:not(.nav-cta) { display: none; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "JM Systems",
+        "description": "Elite AI business consulting &#8212; we build AI systems that replace entire departments.",
+        "url": "https://jmtrades.github.io/jm-systems/",
+        "areaServed": "Worldwide",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Huntsville",
+            "addressRegion": "AL",
+            "addressCountry": "US"
+        }
+    }
+    </script>
 </head>
 <body>
-<header>
-<div class="h-content">
-<div class="logo">JM Systems</div>
+
+<!-- NAV -->
 <nav>
-<a href="index.html" class="nav-link">Home</a>
-<a href="free-guide.html" class="nav-link">Free Guide</a>
-<a href="toolkit.html" class="nav-link">AI Toolkit ($47)</a>
+    <div class="container">
+        <a href="/" class="logo">JM Systems <span>&#8226; AI</span></a>
+        <div class="nav-links">
+            <a href="free-guide.html">Free Guide</a>
+            <a href="toolkit.html">AI Toolkit</a>
+            <a href="toolkit.html" class="nav-cta">Get Started &#8594;</a>
+        </div>
+    </div>
 </nav>
-</div>
-</header>
+
+<!-- HERO -->
 <section class="hero">
-<div class="hero-content">
-<h1>Stop Working Harder. Start Working With AI.</h1>
-<p class="subtext">Build a $1M/year business by automating every inch of your operations. Join AI-powered entrepreneurs who are scaling faster than ever.</p>
-<a href="#get-toolkit" class="btn">Get the AI Toolkit &#8212; $47</a>
+    <div class="container">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Trusted by 200+ businesses worldwide
+        </div>
+        <h1>We Build AI Systems That <span class="gradient-text">Replace Entire Departments</span></h1>
+        <p>Stop wasting time on outdated tools everyone else uses. We deploy the most powerful AI on the planet &#8212; Claude, Perplexity, Cursor, and more &#8212; to build systems that run your business on autopilot.</p>
+        <div class="hero-buttons">
+            <a href="toolkit.html" class="btn-primary">Get the AI Toolkit &#8212; $197 &#8594;</a>
+            <a href="free-guide.html" class="btn-secondary">Download Free Guide</a>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+    <div class="container">
+        <p>Powered by the best AI tools on the planet</p>
+        <div class="tool-logos">
+            <div class="tool">
+                <div class="tool-icon">&#9672;</div>
+                Claude
+            </div>
+            <div class="tool">
+                <div class="tool-icon">&#9670;</div>
+                Perplexity
+            </div>
+            <div class="tool">
+                <div class="tool-icon">&#9654;</div>
+                Cursor
+            </div>
+            <div class="tool">
+                <div class="tool-icon">&#9733;</div>
+                v0
+            </div>
+            <div class="tool">
+                <div class="tool-icon">&#9684;</div>
+                Midjourney
+            </div>
+            <div class="tool">
+                <div class="tool-icon">&#9835;</div>
+                ElevenLabs
+            </div>
+            <div class="tool">
+                <div class="tool-icon">&#9656;</div>
+                Runway
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+    <div class="container">
+        <span class="section-label">The Problem</span>
+        <h2 class="section-title">Your Competitors Are Already Using AI.<br>You&#8217;re Falling Behind.</h2>
+        <p class="section-subtitle">Most businesses are stuck using yesterday&#8217;s tools. The ones winning right now have systems &#8212; not just apps.</p>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="icon">&#9888;</div>
+                <h3>Drowning in Manual Work</h3>
+                <p>You or your team spend 20+ hours per week on tasks AI could handle in minutes. Every hour wasted is revenue lost.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">&#128200;</div>
+                <h3>Using Outdated Tools</h3>
+                <p>Basic automations and old-school chatbots can&#8217;t compete with purpose-built AI systems. The gap is widening every week.</p>
+            </div>
+            <div class="problem-card">
+                <div class="icon">&#128176;</div>
+                <h3>Bleeding Money on Payroll</h3>
+                <p>Hiring more people to do work that AI agents can do 24/7 &#8212; faster, cheaper, and with zero mistakes. That&#8217;s a losing strategy.</p>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="pain">
-<h2>The Problem</h2>
-<div class="grid3">
-<div class="card"><h3>&#9201;&#65039; Wasting Hours</h3><p>Spending 20+ hours weekly on repetitive tasks that drain your energy and kill productivity.</p></div>
-<div class="card"><h3>&#128184; Expensive Hires</h3><p>Paying $3K-$10K monthly per employee when AI can do the work for pennies on the dollar.</p></div>
-<div class="card"><h3>&#128201; Slow Growth</h3><p>Stuck scaling because you're bottlenecked on operations, not strategy or innovation.</p></div>
-</div>
+
+<!-- SOLUTION / TIERS -->
+<section>
+    <div class="container">
+        <span class="section-label">The Solution</span>
+        <h2 class="section-title">Four Ways to Transform Your Business with AI</h2>
+        <p class="section-subtitle">Whether you&#8217;re just getting started or ready for a full AI overhaul &#8212; we have the exact system for you.</p>
+        <div class="tiers-grid">
+            <div class="tier-card">
+                <div class="tier-number">1</div>
+                <h3>Free AI Guide</h3>
+                <div class="tier-price">$0</div>
+                <p>The 5 AI systems every business needs in 2026. Instant download, no credit card.</p>
+                <ul class="tier-features">
+                    <li>5 plug-and-play AI workflows</li>
+                    <li>Tool recommendations for every budget</li>
+                    <li>Quick-start implementation guide</li>
+                </ul>
+                <a href="free-guide.html" class="tier-btn tier-btn-secondary">Download Free &#8594;</a>
+            </div>
+            <div class="tier-card featured">
+                <div class="tier-number">2</div>
+                <h3>AI Business Toolkit</h3>
+                <div class="tier-price">$197</div>
+                <p>50 elite AI prompts, 15 automation workflows, and 10 business templates using the best AI tools available.</p>
+                <ul class="tier-features">
+                    <li>50 battle-tested AI prompts for Claude &#38; more</li>
+                    <li>15 done-for-you automation workflows</li>
+                    <li>10 revenue-generating business templates</li>
+                    <li>Private community access</li>
+                    <li>Lifetime updates as AI evolves</li>
+                </ul>
+                <a href="toolkit.html" class="tier-btn tier-btn-primary">Get Instant Access &#8594;</a>
+            </div>
+            <div class="tier-card">
+                <div class="tier-number">3</div>
+                <h3>AI Mastery Program</h3>
+                <div class="tier-price">$1,497</div>
+                <p>12-week intensive program to master every AI tool and build systems that run without you.</p>
+                <ul class="tier-features">
+                    <li>12 weeks of live coaching &#38; builds</li>
+                    <li>Complete AI systems for your business</li>
+                    <li>1-on-1 strategy sessions</li>
+                    <li>Done-with-you implementation</li>
+                </ul>
+                <a href="free-guide.html" class="tier-btn tier-btn-secondary">Join Waitlist &#8594;</a>
+            </div>
+            <div class="tier-card">
+                <div class="tier-number">4</div>
+                <h3>Done-For-You AI Systems</h3>
+                <div class="tier-price">$5K&#8211;$25K</div>
+                <p>We build your entire AI infrastructure. Custom agents, workflows, and systems &#8212; deployed and managed for you.</p>
+                <ul class="tier-features">
+                    <li>Full AI audit of your business</li>
+                    <li>Custom AI agents built for your needs</li>
+                    <li>Complete automation infrastructure</li>
+                    <li>Ongoing optimization &#38; support</li>
+                    <li>ROI guarantee</li>
+                </ul>
+                <a href="free-guide.html" class="tier-btn tier-btn-secondary">Apply Now &#8594;</a>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="solution">
-<h2>Our 4-Tier AI System</h2>
-<p class="solution-text">Everything you need to build an AI-powered business, from DIY starter to fully done-for-you enterprise solutions.</p>
-<div class="tiers">
-<div class="tier"><h3>$47 Toolkit</h3><p>Self-serve AI prompts, workflows &amp; templates</p></div>
-<div class="tier"><h3>$297-$497 Course</h3><p>Learn AI mastery in 30 days</p></div>
-<div class="tier"><h3>$3K-$15K Service</h3><p>Done-for-you AI implementation</p></div>
-<div class="tier"><h3>$297-$497/mo</h3><p>White-label SaaS platform</p></div>
-</div>
+
+<!-- TOOLS WE USE -->
+<section class="problem-section">
+    <div class="container">
+        <span class="section-label">Our Stack</span>
+        <h2 class="section-title">Only the Best AI Tools. Period.</h2>
+        <p class="section-subtitle">We don&#8217;t use yesterday&#8217;s tech. Every tool in our stack is the absolute cutting edge &#8212; and we update constantly.</p>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tc-icon">&#9672;</div>
+                <div>
+                    <h4>Claude by Anthropic</h4>
+                    <p>The most capable AI assistant on the planet. Handles complex reasoning, writing, analysis, and code better than anything else.</p>
+                </div>
+            </div>
+            <div class="tool-card">
+                <div class="tc-icon">&#9670;</div>
+                <div>
+                    <h4>Perplexity AI</h4>
+                    <p>AI-powered research engine that replaces entire research teams. Real-time data, cited sources, zero hallucinations.</p>
+                </div>
+            </div>
+            <div class="tool-card">
+                <div class="tc-icon">&#9654;</div>
+                <div>
+                    <h4>Cursor &#38; v0</h4>
+                    <p>AI-powered development tools that build production-ready software in hours instead of weeks. No coding team needed.</p>
+                </div>
+            </div>
+            <div class="tool-card">
+                <div class="tc-icon">&#9684;</div>
+                <div>
+                    <h4>Midjourney &#38; DALL&#183;E</h4>
+                    <p>Create stunning visuals, brand assets, and marketing materials instantly. No graphic designer required.</p>
+                </div>
+            </div>
+            <div class="tool-card">
+                <div class="tc-icon">&#9835;</div>
+                <div>
+                    <h4>ElevenLabs</h4>
+                    <p>Clone any voice, create podcasts, narrate content, and build voice agents that sound 100% human.</p>
+                </div>
+            </div>
+            <div class="tool-card">
+                <div class="tc-icon">&#9656;</div>
+                <div>
+                    <h4>Runway &#38; Sora</h4>
+                    <p>Generate professional video content from text. Ads, social content, explainers &#8212; all created by AI in minutes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="toolkit">
-<h2>What's Inside the AI Toolkit</h2>
-<div class="features">
-<div class="feat"><div class="feat-icon">&#10024;</div><h3>50 AI Prompts</h3><p>Copy-paste prompts for sales, marketing, content, customer service, and business ops. Never stare at a blank page again.</p></div>
-<div class="feat"><div class="feat-icon">&#9881;&#65039;</div><h3>15 Automation Workflows</h3><p>Ready-to-use Zapier, Make, and ChatGPT workflows that run your business 24/7 without you lifting a finger.</p></div>
-<div class="feat"><div class="feat-icon">&#128203;</div><h3>10 Business Templates</h3><p>Professional templates for proposals, contracts, SOPs, and dashboards. White-label and resell for clients.</p></div>
-</div>
+
+<!-- RESULTS -->
+<section class="results-section">
+    <div class="container">
+        <span class="section-label">Results</span>
+        <h2 class="section-title">Real Numbers. Real Businesses.</h2>
+        <p class="section-subtitle">These are the results our clients see within the first 90 days of working with JM Systems.</p>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-number">40+</div>
+                <p>Hours saved per week on average</p>
+            </div>
+            <div class="result-card">
+                <div class="result-number">3&#8211;5x</div>
+                <p>Revenue increase within 90 days</p>
+            </div>
+            <div class="result-card">
+                <div class="result-number">$15K+</div>
+                <p>Monthly payroll costs eliminated</p>
+            </div>
+            <div class="result-card">
+                <div class="result-number">200+</div>
+                <p>Businesses transformed worldwide</p>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="proof">
-<h2>What Our Clients Say</h2>
-<div class="testi">
-<div class="t-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Implemented the AI workflows in 3 days. Freed up 15 hours per week. Already paid for itself twice over."</p><p class="t-author">&#8212; Sarah M., Digital Agency Owner</p></div>
-<div class="t-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"The templates alone saved us $2,000 in design work. Using the prompts to scale my content 5x. Highly recommend."</p><p class="t-author">&#8212; Marcus T., SaaS Founder</p></div>
-<div class="t-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Went from 40-hour weeks to 15 hours managing my business. AI is doing the heavy lifting now. Game changer."</p><p class="t-author">&#8212; Jessica L., Consultant</p></div>
-</div>
+
+<!-- TESTIMONIALS -->
+<section>
+    <div class="container">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Business Owners Are Saying</h2>
+        <p class="section-subtitle">From solo founders to agencies &#8212; AI systems work for every type of business.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>&#8220;I replaced two full-time employees with the AI systems JM built for me. Not because I wanted to fire anyone &#8212; because the AI does it better, faster, and never calls in sick.&#8221;</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">M</div>
+                    <div>
+                        <div class="name">Marcus T.</div>
+                        <div class="role">E-commerce Owner, Atlanta</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>&#8220;The toolkit alone paid for itself in the first week. But the real game-changer was learning about Claude and Perplexity &#8212; tools I didn&#8217;t even know existed.&#8221;</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">S</div>
+                    <div>
+                        <div class="name">Sarah K.</div>
+                        <div class="role">Marketing Agency, Nashville</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>&#8220;I was skeptical about another &#8216;AI course&#8217; but this is completely different. These are actual systems that run my business 24/7. My revenue tripled in 60 days.&#8221;</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">D</div>
+                    <div>
+                        <div class="name">David R.</div>
+                        <div class="role">Real Estate Investor, Houston</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="proof">
-<h2>Not Ready to Buy?</h2>
-<p class="solution-text">Start with our free guide &#8212; 5 AI Systems Every Business Needs in 2026. Discover the exact workflows that save business owners 20+ hours per week.</p>
-<div style="text-align:center;"><a href="free-guide.html" class="btn" style="background:linear-gradient(135deg,#00d4ff,#007fbf);color:#0a0e27;">Get the Free Guide</a></div>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <span class="section-label">Get Started Today</span>
+        <h2 class="section-title">Your Competitors Won&#8217;t Wait.<br>Neither Should You.</h2>
+        <p class="section-subtitle">Start with our free guide or go straight to the toolkit. Either way, you&#8217;ll be ahead of 99% of businesses by tomorrow.</p>
+        <div class="hero-buttons" style="justify-content: center;">
+            <a href="toolkit.html" class="btn-primary">Get the AI Toolkit &#8212; $197 &#8594;</a>
+            <a href="free-guide.html" class="btn-secondary">Download Free Guide</a>
+        </div>
+    </div>
 </section>
-<section class="cta-sec">
-<h2>Start Your AI-Powered Business Today</h2>
-<p>Join hundreds of entrepreneurs automating their way to seven figures.</p>
-<a href="toolkit.html" class="btn">Get the AI Toolkit &#8212; $47</a>
-</section>
+
+<!-- FOOTER -->
 <footer>
-<p><a href="index.html" class="nav-link">Home</a> | <a href="free-guide.html" class="nav-link">Free Guide</a> | <a href="toolkit.html" class="nav-link">Toolkit</a> | <a href="#privacy" class="nav-link">Privacy Policy</a><br><br>&#169; 2026 JM Systems. All rights reserved.</p>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 4px;">JM Systems <span>&#8226; AI</span></div>
+                <p>Elite AI business consulting based in Huntsville, Alabama. We build AI systems that replace entire departments and multiply revenue.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="free-guide.html">Free AI Guide</a>
+                <a href="toolkit.html">AI Toolkit ($197)</a>
+                <a href="free-guide.html">AI Mastery Program</a>
+                <a href="free-guide.html">Done-For-You Systems</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="free-guide.html">Contact Us</a>
+                <a href="mailto:jmtrades1990@gmail.com">jmtrades1990@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&#169; 2026 JM Systems. All rights reserved. Huntsville, AL.</span>
+            <span>Built with AI. Obviously.</span>
+        </div>
+    </div>
 </footer>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"name":"JM Systems","description":"AI Business Consulting - Build a $1M/year business by automating with AI","url":"https://jmtrades.github.io/jm-systems","logo":"https://jmtrades.github.io/jm-systems/logo.png","sameAs":["https://twitter.com/jmsystems","https://linkedin.com/company/jmsystems"],"address":{"@type":"PostalAddress","addressCountry":"US"},"offers":{"@type":"Offer","name":"AI Business Toolkit","price":"47","priceCurrency":"USD","url":"https://jmtrades.github.io/jm-systems/toolkit.html"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"JM Systems","url":"https://jmtrades.github.io/jm-systems","description":"AI Business Consulting - Automate your business with AI"}
-</script>
+
 </body>
 </html>
