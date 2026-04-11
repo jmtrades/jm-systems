@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50+ Best AI Tools for Business Automation (2026) | JM Systems</title>
+    <meta name="description" content="Discover 50+ free and affordable AI tools to automate your entire business. Our comprehensive directory covers content creation, design, video, productivity, and more. Updated April 2026.">
+    <meta name="keywords" content="AI tools, business automation, free AI, ChatGPT, Claude, automation software, productivity tools">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="50+ Best AI Tools for Business Automation (2026) | JM Systems">
+    <meta property="og:description" content="The ultimate AI tools directory with 50+ free & affordable tools to automate your entire business.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jm-systems.vercel.app/tools.html">
+    <meta property="og:image" content="https://jm-systems.vercel.app/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="50+ Best AI Tools for Business Automation">
+    <meta name="twitter:description" content="The ultimate AI tools directory. Free & affordable tools to automate your business.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #09090b;
+            --bg-card: #121218;
+            --bg-light: #1a1a22;
+            --gold: #D4AF37;
+            --green: #00E5A0;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #2a2a32;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(9, 9, 11, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--green));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 1rem 1rem;
+            }
+
+            nav {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 229, 160, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-date {
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .email-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--gold) 0%, #d4af37dd 100%);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--green) 0%, #00e5a0dd 100%);
+            color: #000;
+        }
+
+        .form-subtext {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1.5rem;
+                margin-top: 70px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-form input {
+                min-width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* SEARCH SECTION */
+        .search-section {
+            max-width: 1200px;
+            margin: 4rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        /* CATEGORY SECTIONS */
+        .tools-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .category-section {
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .category-emoji {
+            font-size: 2rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--green));
+            border-radius: 2px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .tool-card:hover::before {
+            left: 100%;
+        }
+
+        .tool-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .tool-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-free {
+            background: rgba(0, 229, 160, 0.2);
+            color: var(--green);
+            border: 1px solid var(--green);
+        }
+
+        .badge-paid {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .tool-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .tool-category {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--bg-light);
+            color: var(--text-secondary);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-dark) 100%);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -200px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 229, 160, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .cta-subtext {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn-large {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--green);
+            color: var(--green);
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 229, 160, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-large {
+                width: 100%;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* LOADING & NO RESULTS */
+        .no-results {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results p {
+            font-size: 1.1rem;
+        }
+
+        /* SCROLL ANIMATIONS */
+        .fade-in {
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <a href="#home" class="logo">JM Systems</a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#tools">Free Tools</a>
+                <a href="links.html">Links</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>The Ultimate <span class="hero-highlight">AI Tools Directory</span></h1>
+            <p>50+ Free & Affordable AI Tools to Automate Your Entire Business</p>
+            <p class="hero-date">✨ Updated April 2026</p>
+
+            <form class="email-form" id="heroForm">
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required
+                    aria-label="Email address"
+                >
+                <button type="submit" class="btn">Get Access</button>
+            </form>
+            <p class="form-subtext">Get our free AI Automation Toolkit + access the full list</p>
+        </div>
+    </section>
+
+    <!-- SEARCH SECTION -->
+    <div class="search-section" id="tools">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tools by name (e.g., ChatGPT, Canva, Zapier)..."
+                aria-label="Search tools"
+            >
+        </div>
+    </div>
+
+    <!-- TOOLS DIRECTORY -->
+    <div class="tools-container">
+        <!-- CONTENT & WRITING -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">📝</span>
+                <h2 class="category-title">Content & Writing</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="content-writing" data-name="chatgpt">
+                    <div class="tool-header">
+                        <h3 class="tool-name">ChatGPT</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Advanced AI assistant for content creation, brainstorming, and copywriting. Most popular AI tool globally.</p>
+                    <span class="tool-category">Content Creation</span>
+                </div>
+
+                <div class="tool-card" data-category="content-writing" data-name="claude">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Claude</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Powerful AI assistant with exceptional reasoning abilities. Great for long-form content and complex writing tasks.</p>
+                    <span class="tool-category">Content Creation</span>
+                </div>
+
+                <div class="tool-card" data-category="content-writing" data-name="jasper">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Jasper</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">AI copywriting platform designed specifically for marketing teams. Brands, tone, and templates included.</p>
+                    <span class="tool-category">Content Creation</span>
+                </div>
+
+                <div class="tool-card" data-category="content-writing" data-name="copy.ai">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Copy.ai</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Quick copywriting tool with templates for emails, ads, social posts, and more. User-friendly interface.</p>
+                    <span class="tool-category">Content Creation</span>
+                </div>
+
+                <div class="tool-card" data-category="content-writing" data-name="writesonic">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Writesonic</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">AI writing assistant for blogs, ads, product descriptions, and more. Great SEO capabilities.</p>
+                    <span class="tool-category">Content Creation</span>
+                </div>
+
+                <div class="tool-card" data-category="content-writing" data-name="grammarly">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Grammarly AI</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Grammar checking and writing enhancement AI. Available as browser extension and desktop app.</p>
+                    <span class="tool-category">Writing Tools</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DESIGN & CREATIVE -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">🎨</span>
+                <h2 class="category-title">Design & Creative</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="design-creative" data-name="canva">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Canva AI</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Design platform with AI-powered templates. Create stunning graphics without design experience.</p>
+                    <span class="tool-category">Design Tools</span>
+                </div>
+
+                <div class="tool-card" data-category="design-creative" data-name="midjourney">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Midjourney</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">AI image generation with exceptional quality. Perfect for marketing, social media, and creative projects.</p>
+                    <span class="tool-category">AI Generation</span>
+                </div>
+
+                <div class="tool-card" data-category="design-creative" data-name="dall-e">
+                    <div class="tool-header">
+                        <h3 class="tool-name">DALL-E</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">OpenAI's image generation tool. Create custom images from text descriptions. Some free credits included.</p>
+                    <span class="tool-category">AI Generation</span>
+                </div>
+
+                <div class="tool-card" data-category="design-creative" data-name="adobe-firefly">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Adobe Firefly</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Adobe's generative AI for images and text effects. Integrates with Creative Cloud apps.</p>
+                    <span class="tool-category">AI Generation</span>
+                </div>
+
+                <div class="tool-card" data-category="design-creative" data-name="looka">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Looka</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">AI logo generator. Create custom logos, brand kits, and marketing assets in minutes.</p>
+                    <span class="tool-category">Logo Design</span>
+                </div>
+
+                <div class="tool-card" data-category="design-creative" data-name="designify">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Designify</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Background remover and photo editor powered by AI. Transform product photos in seconds.</p>
+                    <span class="tool-category">Photo Editing</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIDEO & AUDIO -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">📹</span>
+                <h2 class="category-title">Video & Audio</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="video-audio" data-name="descript">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Descript</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Edit videos by editing text. AI transcription, filler word removal, and clip generation included.</p>
+                    <span class="tool-category">Video Editing</span>
+                </div>
+
+                <div class="tool-card" data-category="video-audio" data-name="capcut">
+                    <div class="tool-header">
+                        <h3 class="tool-name">CapCut</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Free video editing tool with AI features like auto captions, background removal, and effects.</p>
+                    <span class="tool-category">Video Editing</span>
+                </div>
+
+                <div class="tool-card" data-category="video-audio" data-name="synthesia">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Synthesia</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">AI video generator from text. Create professional videos with AI avatars and voiceovers.</p>
+                    <span class="tool-category">Video Generation</span>
+                </div>
+
+                <div class="tool-card" data-category="video-audio" data-name="elevenlabs">
+                    <div class="tool-header">
+                        <h3 class="tool-name">ElevenLabs</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Premium text-to-speech AI. Natural-sounding voiceovers in 29+ languages. API available.</p>
+                    <span class="tool-category">Audio Generation</span>
+                </div>
+
+                <div class="tool-card" data-category="video-audio" data-name="opus-clip">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Opus Clip</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Turn long-form videos into viral short clips automatically. Perfect for repurposing content.</p>
+                    <span class="tool-category">Video Editing</span>
+                </div>
+
+                <div class="tool-card" data-category="video-audio" data-name="riverside">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Riverside</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">All-in-one podcast and video recording platform. Studio-quality audio with AI transcription.</p>
+                    <span class="tool-category">Podcast Tools</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUSINESS & PRODUCTIVITY -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">📊</span>
+                <h2 class="category-title">Business & Productivity</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="business-productivity" data-name="notion">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Notion AI</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">All-in-one workspace with AI writing assistant. Notes, databases, wikis, and calendars combined.</p>
+                    <span class="tool-category">Productivity</span>
+                </div>
+
+                <div class="tool-card" data-category="business-productivity" data-name="zapier">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Zapier</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Automation platform connecting 7000+ apps. Create workflows without coding. Essential for scaling.</p>
+                    <span class="tool-category">Automation</span>
+                </div>
+
+                <div class="tool-card" data-category="business-productivity" data-name="make">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Make</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">No-code automation platform with visual workflows. Similar to Zapier with different pricing model.</p>
+                    <span class="tool-category">Automation</span>
+                </div>
+
+                <div class="tool-card" data-category="business-productivity" data-name="airtable">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Airtable</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Flexible database and project management. Build custom workflows and automate your business.</p>
+                    <span class="tool-category">Database</span>
+                </div>
+
+                <div class="tool-card" data-category="business-productivity" data-name="monday">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Monday AI</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">Work operating system with AI automation. Project management, CRM, and workflow automation.</p>
+                    <span class="tool-category">Project Management</span>
+                </div>
+
+                <div class="tool-card" data-category="business-productivity" data-name="clickup">
+                    <div class="tool-header">
+                        <h3 class="tool-name">ClickUp AI</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">All-in-one project management with AI. Task automation, docs, and real-time collaboration.</p>
+                    <span class="tool-category">Project Management</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CUSTOMER SERVICE -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">💬</span>
+                <h2 class="category-title">Customer Service</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="customer-service" data-name="tidio">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Tidio</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">AI chatbot builder with live chat. Automate customer support across channels.</p>
+                    <span class="tool-category">Chatbot</span>
+                </div>
+
+                <div class="tool-card" data-category="customer-service" data-name="intercom">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Intercom</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">Customer communication platform with AI chatbots. Lead qualification and customer support combined.</p>
+                    <span class="tool-category">Communication</span>
+                </div>
+
+                <div class="tool-card" data-category="customer-service" data-name="drift">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Drift</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">Conversational marketing platform. AI chatbots that engage and qualify leads in real-time.</p>
+                    <span class="tool-category">Chatbot</span>
+                </div>
+
+                <div class="tool-card" data-category="customer-service" data-name="chatbot">
+                    <div class="tool-header">
+                        <h3 class="tool-name">ChatBot</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">No-code chatbot builder. Create AI assistants for customer service without programming.</p>
+                    <span class="tool-category">Chatbot</span>
+                </div>
+
+                <div class="tool-card" data-category="customer-service" data-name="freshdesk">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Freshdesk AI</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Customer support platform with AI. Ticket management, knowledge base, and automation included.</p>
+                    <span class="tool-category">Support Tools</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">📱</span>
+                <h2 class="category-title">Social Media</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="social-media" data-name="buffer">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Buffer</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Social media scheduling with AI features. Post to multiple platforms and analyze performance.</p>
+                    <span class="tool-category">Scheduling</span>
+                </div>
+
+                <div class="tool-card" data-category="social-media" data-name="hootsuite">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Hootsuite</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Social media management platform. Schedule, analyze, and engage across all channels.</p>
+                    <span class="tool-category">Scheduling</span>
+                </div>
+
+                <div class="tool-card" data-category="social-media" data-name="later">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Later</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Visual social media planner. Schedule Instagram, TikTok, and more with drag-and-drop calendar.</p>
+                    <span class="tool-category">Scheduling</span>
+                </div>
+
+                <div class="tool-card" data-category="social-media" data-name="publer">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Publer</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Social media management with AI caption generation. Schedule to all major platforms.</p>
+                    <span class="tool-category">Scheduling</span>
+                </div>
+
+                <div class="tool-card" data-category="social-media" data-name="predis">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Predis.ai</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">AI social media content generator. Create videos, carousels, and images for all platforms.</p>
+                    <span class="tool-category">Content Generation</span>
+                </div>
+
+                <div class="tool-card" data-category="social-media" data-name="taplio">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Taplio</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">LinkedIn-specific AI writing assistant. Create viral posts and engage your network effectively.</p>
+                    <span class="tool-category">LinkedIn Tools</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANALYTICS & SEO -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">📈</span>
+                <h2 class="category-title">Analytics & SEO</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="analytics-seo" data-name="semrush">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Semrush</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">All-in-one SEO platform. Keyword research, competitor analysis, and AI content optimization.</p>
+                    <span class="tool-category">SEO Tools</span>
+                </div>
+
+                <div class="tool-card" data-category="analytics-seo" data-name="surfer">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Surfer SEO</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">AI content optimization tool. Real-time SEO feedback and content briefings included.</p>
+                    <span class="tool-category">SEO Tools</span>
+                </div>
+
+                <div class="tool-card" data-category="analytics-seo" data-name="frase">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Frase</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">AI research and content optimization. Create SEO-optimized content faster than ever.</p>
+                    <span class="tool-category">SEO Tools</span>
+                </div>
+
+                <div class="tool-card" data-category="analytics-seo" data-name="marketmuse">
+                    <div class="tool-header">
+                        <h3 class="tool-name">MarketMuse</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">Content intelligence platform with AI. Identify content gaps and opportunities at scale.</p>
+                    <span class="tool-category">Content Strategy</span>
+                </div>
+
+                <div class="tool-card" data-category="analytics-seo" data-name="ga4">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Google Analytics 4</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Essential web analytics. Track visitors, conversions, and user behavior with AI insights.</p>
+                    <span class="tool-category">Analytics</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SALES & MARKETING -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-emoji">💰</span>
+                <h2 class="category-title">Sales & Marketing</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-category="sales-marketing" data-name="hubspot">
+                    <div class="tool-header">
+                        <h3 class="tool-name">HubSpot AI</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">CRM with AI assistant. Content generation, lead scoring, and email automation included.</p>
+                    <span class="tool-category">CRM</span>
+                </div>
+
+                <div class="tool-card" data-category="sales-marketing" data-name="lemlist">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Lemlist</h3>
+                        <span class="badge badge-paid">Paid</span>
+                    </div>
+                    <p class="tool-description">Email outreach automation with AI personalization. Sales outreach at scale with high response rates.</p>
+                    <span class="tool-category">Email Outreach</span>
+                </div>
+
+                <div class="tool-card" data-category="sales-marketing" data-name="apollo">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Apollo</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Lead database and outreach platform. Find verified B2B contacts and automate email campaigns.</p>
+                    <span class="tool-category">Lead Generation</span>
+                </div>
+
+                <div class="tool-card" data-category="sales-marketing" data-name="lavender">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Lavender</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Email coaching with AI. Get real-time suggestions to improve your sales emails and reply rates.</p>
+                    <span class="tool-category">Email Tools</span>
+                </div>
+
+                <div class="tool-card" data-category="sales-marketing" data-name="instantly">
+                    <div class="tool-header">
+                        <h3 class="tool-name">Instantly</h3>
+                        <span class="badge badge-free">Free</span>
+                    </div>
+                    <p class="tool-description">Cold email automation with warmup. Reach high inbox rates with AI-powered sequences.</p>
+                    <span class="tool-category">Email Outreach</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NO RESULTS -->
+        <div class="no-results hidden" id="noResults">
+            <p>No tools found matching your search. Try adjusting your search terms.</p>
+        </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Want the Complete Automation Playbook?</h2>
+            <p class="cta-subtext">Learn how to connect all these tools into a fully automated business system</p>
+
+            <div class="cta-buttons">
+                <a href="https://jm-systems.vercel.app" class="btn btn-large">The $497 Masterclass</a>
+                <a href="links.html" class="btn btn-large btn-outline">View All Resources</a>
+            </div>
+
+            <form class="email-form" id="ctaForm" style="margin-top: 2rem;">
+                <input
+                    type="email"
+                    placeholder="Enter your email for the full toolkit"
+                    required
+                    aria-label="Email address for toolkit"
+                >
+                <button type="submit" class="btn">Send Toolkit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>JM Systems</h3>
+                    <p>AI Business Consulting & Automation. We help entrepreneurs automate their entire business with AI.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#home" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-secondary)'">Free Tools Directory</a></li>
+                        <li><a href="links.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-secondary)'">All Resources</a></li>
+                        <li><a href="https://jm-systems.vercel.app" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-secondary)'">AI Masterclass</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://tiktok.com/@jmsystems.ai" class="social-link" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        <a href="https://instagram.com/juniormartin.ai" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JM Systems. All rights reserved. | Premium AI Business Consulting</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // EMAIL FORM SUBMISSION
+        const heroForm = document.getElementById('heroForm');
+        const ctaForm = document.getElementById('ctaForm');
+        const supabaseUrl = 'https://ucjbsftixnnbmuodholg.supabase.co/functions/v1/capture-lead';
+
+        async function submitEmail(email, formElement) {
+            try {
+                const response = await fetch(supabaseUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    const input = formElement.querySelector('input[type="email"]');
+                    const originalPlaceholder = input.placeholder;
+                    input.style.borderColor = 'var(--green)';
+                    input.placeholder = '✓ Email captured! Check your inbox.';
+                    input.value = '';
+
+                    setTimeout(() => {
+                        input.placeholder = originalPlaceholder;
+                        input.style.borderColor = '';
+                    }, 3000);
+                } else {
+                    console.error('Error submitting email:', response.statusText);
+                    alert('Error submitting email. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting email. Please try again.');
+            }
+        }
+
+        heroForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = heroForm.querySelector('input[type="email"]').value;
+            submitEmail(email, heroForm);
+        });
+
+        ctaForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = ctaForm.querySelector('input[type="email"]').value;
+            submitEmail(email, ctaForm);
+        });
+
+        // SEARCH AND FILTER FUNCTIONALITY
+        const searchInput = document.getElementById('searchInput');
+        const toolCards = document.querySelectorAll('.tool-card');
+        const categorySections = document.querySelectorAll('.category-section');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            if (searchTerm === '') {
+                // Show all tools
+                toolCards.forEach(card => card.classList.remove('hidden'));
+                categorySections.forEach(section => section.style.display = 'block');
+                noResults.classList.add('hidden');
+                return;
+            }
+
+            let visibleCards = 0;
+
+            // Filter cards
+            toolCards.forEach(card => {
+                const name = card.getAttribute('data-name').toLowerCase();
+                const description = card.querySelector('.tool-description').textContent.toLowerCase();
+
+                const matches = name.includes(searchTerm) || description.includes(searchTerm);
+
+                if (matches) {
+                    card.classList.remove('hidden');
+                    visibleCards++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Show/hide categories based on visible cards
+            categorySections.forEach(section => {
+                const visibleInSection = section.querySelectorAll('.tool-card:not(.hidden)').length;
+                section.style.display = visibleInSection > 0 ? 'block' : 'none';
+            });
+
+            // Show no results message
+            noResults.classList.toggle('hidden', visibleCards > 0);
+        });
+
+        // SMOOTH SCROLL
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // INTERSECTION OBSERVER FOR ANIMATIONS
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe tool cards
+        toolCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
